@@ -78,7 +78,7 @@ Material:
     - _TessValue: 4
     - _WaterDepth: 87.15
     - _WaterFalloff: -0.21
-    - _WaterSmoothness: -3.43
+    - _WaterSmoothness: -3.4
     - _WaterSpecular: 0.05
     - __dirty: 0
     m_Colors:
