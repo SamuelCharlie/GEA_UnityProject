@@ -1,4 +1,4 @@
-﻿Shader "Skywater/Shallow Water/Self/ShallowWaterRTUpdate"
+Shader "Skywater/Shallow Water/Self/ShallowWaterRTUpdate"
 {
     Properties
     {
@@ -56,7 +56,7 @@
         if(_gotDrip> 0.1)
         {
             //d = 0.2 * smoothstep(_dripSize, 0.0, length(float2(_dripInputX, _dripInputY) - uv.xy) * resolution);
-            d += 0.2 * smoothstep(_dripSize * screenscale, 5.0 * screenscale, length(float2(_dripInputX, _dripInputY) - uv.xy) * resolution);
+            d += 1000 * smoothstep(_dripSize * screenscale, 5.0 * screenscale, length(float2(_dripInputX, _dripInputY) - uv.xy) * resolution);
         }
         
         // The actual propagation:
