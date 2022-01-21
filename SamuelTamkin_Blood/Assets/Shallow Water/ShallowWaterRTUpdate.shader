@@ -2,9 +2,9 @@ Shader "Skywater/Shallow Water/Self/ShallowWaterRTUpdate"
 {
     Properties
     {
-        [PowerSlider(0.01)]
+        [PowerSlider(1.0)]
         _dampening("Dampening", Range(0.0, 1.0)) = 0.999
-		_inputSize("InputSize", Float) = 5
+		_inputSize("InputSize", Float) = 0.1
 		_inputPush("Input Push", Float) = 0
     }
     CGINCLUDE
@@ -31,7 +31,7 @@ Shader "Skywater/Shallow Water/Self/ShallowWaterRTUpdate"
         float2 resolution = float2(_CustomRenderTextureWidth, _CustomRenderTextureHeight);
         float2 uv = i.globalTexcoord;
         
-        float3 e = float3(float2(1.0, 1.0) / resolution.xy, 0.0);
+        float3 e = float3(float2(0.1, 0.1) / resolution.xy, 0.0);
         
         float2 c = tex2D(_SelfTexture2D, uv);
         
